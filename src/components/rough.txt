@@ -1,0 +1,27 @@
+{/*const getapidata = async()=>{
+
+        const resone = await axios({
+            method: 'get',
+            url: 'https://api.pinnacle.com/v2/bets?betlist=RUNNING&fromDate=2017-11-21T00:00:00Z&toDate=2017-11-29T00:00:00Z',
+            header: {"Access-Control-Allow-Origin": "http://localhost:3002"},
+            Authorization: 'auth'
+          });
+        //setitems(res.data.results);
+        console.log(resone.data.results);
+    }*/}
+
+
+
+    const getapidata = async()=>{
+
+        const resone = await axios({
+            method: 'get',
+            url: 'https://pinnacle-odds.p.rapidapi.com/v2/sports/1/categories',
+            headers: {"x-rapidapi-key": "3711c7e417mshf1ec4f2784ca76ap1898fbjsnc0de68978d97",
+            "x-rapidapi-host": "pinnacle-odds.p.rapidapi.com",
+            "useQueryString": true},
+            Authorization: 'auth'
+          });
+        //setitems(res.data.results);
+        console.log(resone.data.results);
+    }
